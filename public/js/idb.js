@@ -52,7 +52,7 @@ function saveRecord(record) {
     getAll.onsuccess = function() {
         // if stored data, send to api server
         if (getAll.result.length > 0) {
-        fetch('/api/transactions', {
+        fetch('/api/transaction', {
             method: 'POST',
             body: JSON.stringify(getAll.result),
             headers: {
@@ -82,5 +82,5 @@ function saveRecord(record) {
   }
 
   // listen for app coming back online
-window.addEventListener('online', uploadPizza);
+window.addEventListener('online', uploadTransaction);
   
