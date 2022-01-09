@@ -20,6 +20,25 @@ const FILES_TO_CACHE = [
     "./js/index.js"
   ];
 
+// Respond with cached resources
+self.addEventListener('fetch', function (e) {
+    console.log('fetch request : ' + e.request.url)
+    e.respondWith(
+      caches.match(e.request).then(function (request) {
+        if (request) { 
+        // if cache, respond with cache
+          console.log('responding with cache : ' + e.request.url)
+          return request
+        } else {       
+        // if no cache, fetch request
+          console.log('file is not cached, fetching : ' + e.request.url)
+          return fetch(e.request)
+        }
+      })
+    )
+  })
+
+
 // Runs before window is created
 self.addEventListener('install', function (e) {
     e.waitUntil(
