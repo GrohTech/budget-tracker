@@ -15,10 +15,9 @@ request.onsuccess = function(event) {
     // Once db is created with object store, save db in global variable
     db = event.target.result;
   
-    // check if app is online, if yes run uploadTransaction() function to send all local db data to api
+    // If app is online, run uploadTransaction()
     if (navigator.onLine) {
-      // we haven't created this yet, but we will soon, so let's comment it out for now
-      // uploadTransaction();
+      uploadTransaction();
     }
   };
   
@@ -33,8 +32,55 @@ function saveRecord(record) {
     const transaction = db.transaction(['new_transaction'], 'readwrite');
   
     // access the object store for `new_pizza`
-    const newTransactionObjectStore = transaction.objectStore('new_transaction');
+    const transactionObjectStore = transaction.objectStore('new_transaction');
   
     // add record to your store with add method
-    newTransactionObjectStore.add(record);
+    transactionObjectStore.add(record);
   }
+
+  function uploadTransaction() {
+    // open transaction on db
+    const transaction = db.transaction(['new_transaction'], 'readwrite');
+  
+    // access object store
+    const transactionObjectStore = transaction.objectStore('new_transaction');
+  
+    // ger object store records; add to variable
+    const getAll = transactionObjectStore.getAll();
+
+    // If sucessful, execute function
+    getAll.onsuccess = function() {
+        // if stored data, send to api server
+        if (getAll.result.length > 0) {
+        fetch('/api/transactions', {
+            method: 'POST',
+            body: JSON.stringify(getAll.result),
+            headers: {
+            Accept: 'application/json, text/plain, */*',
+            'Content-Type': 'application/json'
+            }
+        })
+            .then(response => response.json())
+            .then(serverResponse => {
+            if (serverResponse.message) {
+                throw new Error(serverResponse);
+            }
+            // open one more transaction
+            const transaction = db.transaction(['new_transaction'], 'readwrite');
+            // access transaction object store
+            const transactionObjectStore = transaction.objectStore('new_transaction');
+            // clear all items in your store
+            transactionObjectStore.clear();
+
+            alert('All saved transactions have been submitted!');
+            })
+            .catch(err => {
+            console.log(err);
+            });
+        }
+    };
+  }
+
+  // listen for app coming back online
+window.addEventListener('online', uploadPizza);
+  
