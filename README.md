@@ -35,9 +35,10 @@ Start server:
 npm start
 ```
 
-Track your budget, here:
-* [App Demo Video - User routes](https://watch.screencastify.com/v/K9tFri5Vgnd2mjEkZ2eV)
-* [App Demo Video - Thought routes](https://watch.screencastify.com/v/juh2FnEah94uqF69Rw4m)
+1. Track your budget, here:
+    * [Heroku Deployed App](https://floating-dawn-13731.herokuapp.com/)
+2. Watch the demo, here:
+    * [App Demo Video]()
 
 1. Enter a transaction name
 2. Enter a transcation amount
