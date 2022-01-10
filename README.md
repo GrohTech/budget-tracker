@@ -5,7 +5,7 @@
 
 ## Description 
 
-A budget tracker app with offline capabilities.
+Budget Tracker is a Progressive Web Application online-offline (using service workers and indexedDB) budget tracker capabilities.
 
   
 ## Table of Contents 
@@ -17,7 +17,7 @@ A budget tracker app with offline capabilities.
   
 ## Installation
 
-Users will need Node.js, Express, MongoDB, Mongoose, to run the app, and a RESTful API client (Ex. Insomnia, Postman) to test the routes.
+Users will need Node.js, Express, MongoDB, and Mongoose, to run the app.
   
 ## Instructions 
 
@@ -35,12 +35,20 @@ Start server:
 npm start
 ```
 
-1. Go to RESTful API client
-2. Test GET, POST, PUT, DELETE routes
-
-
+Track your budget, here:
 * [App Demo Video - User routes](https://watch.screencastify.com/v/K9tFri5Vgnd2mjEkZ2eV)
 * [App Demo Video - Thought routes](https://watch.screencastify.com/v/juh2FnEah94uqF69Rw4m)
+
+1. Enter a transaction name
+2. Enter a transcation amount
+3. Click "add funds" or "subtract funds"
+4. View chart for a visual representation of your budget
+5. To see offline capabilities:
+    * open dev tools 
+    * click "Network"
+    * change "No throttling" to "offline"
+    * enter some transactions
+    * change "offline" to "No throttling" to update budget with offline transactions
 
 ## Languages & Tools
 
@@ -57,6 +65,8 @@ npm start
 1. Lauren Groh
 2. Front-end starter code from UW Extended Campus Trilogy Bootcamp - with additional help from Trilogy tutor Ismael Lopez, Trilogy materials, and the below resources. 
 * [Steve Griffith - Prof3ssorSt3v3](https://youtu.be/43o-xXcKr_M)
+* [Jonny Kalambay](https://youtu.be/MxfxiR8TVNU)
+* [Vuka](https://youtu.be/27GoRa4d15c)
 
 ## Questions
 
