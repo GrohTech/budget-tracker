@@ -48,5 +48,5 @@
     "start_url": "./index.html",
     "description": "An app that allows you track your budget.",
     "background_color": "#ffffff",
-    "theme_color": "#000000"
+    "theme_color": "#ffffff"
   }
