@@ -47,9 +47,9 @@ npm start
     * enter some transactions
     * change "offline" to "No throttling" to update budget with offline transactions
 
-![Budget Tracker screenshot-1](./images/screenshot-1.png "screenshot-1")
-![Budget Tracker screenshot-2](./images/screenshot-2.png "screenshot-2")
-![Budget Tracker screenshot-3](./images/screenshot-3.png "screenshot-3")
+![Budget Tracker screenshot-1](./public/images/screenshot-1.png "screenshot-1")
+![Budget Tracker screenshot-2](./public/images/screenshot-2.png "screenshot-2")
+![Budget Tracker screenshot-3](./public/images/screenshot-3.png "screenshot-3")
 
 ## Languages & Tools
 
