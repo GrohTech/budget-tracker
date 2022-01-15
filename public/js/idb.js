@@ -1,7 +1,7 @@
 // create variable to hold db connection
 let db;
 // establish connection to IndexedDB database; set to version 1
-const request = indexedDB.open('budget_db', 1);
+const request = indexedDB.open('budget_tracker', 1);
 
 // fire event on all db interactions
 request.onupgradeneeded = function(event) {
