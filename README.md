@@ -1,7 +1,4 @@
-# budget-tracker
-
-
-# Social Network API
+# Budget Tracker
 
 ## Description 
 
@@ -17,7 +14,7 @@ Budget Tracker is a Progressive Web Application online-offline (using service wo
   
 ## Installation
 
-Users will need Node.js, Express, MongoDB, and Mongoose, to run the app.
+Users will need Node.js, Express, MongoDB, and Mongoose, to work with this app.
   
 ## Instructions 
 
@@ -35,10 +32,9 @@ Start server:
 npm start
 ```
 
-1. Track your budget, here:
+* Track your budget, here:
     * [Heroku Deployed App](https://floating-dawn-13731.herokuapp.com/)
-2. Watch the demo, here:
-    * [App Demo Video]()
+
 
 1. Enter a transaction name
 2. Enter a transcation amount
@@ -50,6 +46,10 @@ npm start
     * change "No throttling" to "offline"
     * enter some transactions
     * change "offline" to "No throttling" to update budget with offline transactions
+
+![Budget Tracker screenshot-1](./images/screenshot-1.png "screenshot-1")
+![Budget Tracker screenshot-2](./images/screenshot-2.png "screenshot-2")
+![Budget Tracker screenshot-3](./images/screenshot-3.png "screenshot-3")
 
 ## Languages & Tools
 
@@ -64,7 +64,7 @@ npm start
 
 
 1. Lauren Groh
-2. Front-end starter code from UW Extended Campus Trilogy Bootcamp - with additional help from Trilogy tutor Ismael Lopez, Trilogy materials, and the below resources. 
+2. Front-end starter code from UW Extended Campus Trilogy Bootcamp - with additional help from Trilogy tutor Ismael Lopez, Trilogy TAs Maria Wong and Raj Rai, Trilogy materials, and the below resources. 
 * [Steve Griffith - Prof3ssorSt3v3](https://youtu.be/43o-xXcKr_M)
 * [Jonny Kalambay](https://youtu.be/MxfxiR8TVNU)
 * [Vuka](https://youtu.be/27GoRa4d15c)
